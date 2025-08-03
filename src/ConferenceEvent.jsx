@@ -86,7 +86,6 @@ const ConferenceEvent = () => {
     const items = getItemsFromTotalCost();
 
     const ItemsDisplay = ({ items }) => {
-            const ItemsDisplay = ({ items }) => {
                 console.log(items);
                 return <>
                     <div className="display_box1">
@@ -101,7 +100,7 @@ const ConferenceEvent = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {items.map((item, index) => {
+                                {items.map((item, index) => (
                                     <tr key={index}>
                                         <td>{item.name}</td>
                                         <td>${item.cost}</td>
@@ -114,12 +113,11 @@ const ConferenceEvent = () => {
                                             
                                         </td> 
                                     </tr>
-                                })}
+                                ))}
                             </tbody>
                         </table>
                     </div> 
                 </>
-            };
     };
 
     const calculateTotalCost = (section) => {
